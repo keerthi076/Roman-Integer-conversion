@@ -14,11 +14,11 @@
 <body>
 	<div class="container">
 		
-		<div class="selectoperation" style="display:block">
+		<div class="selectoperation" style="display:block;">
 			<h1>ROMAN/INTEGER CONVERSION</h1>
 			<div class="middle">
-			<div style="float:left" id="operation1" onclick="operation1()">Roman to Integer</div>
-			<div style="float:right" id='operation2' onclick="operation2()">Integer to Roman</div>
+			<div  id="operation1" onclick="operation1()">Roman to Integer</div>
+			<div  id='operation2' onclick="operation2()">Integer to Roman</div>
         </div></div>
         <div class="romanToInt" style="display:none">
         	<h1>ROMAN TO INTEGER CONVERSION<span onclick="change()"><i class="fa fa-home" style="float:right"></i></span></h1>
@@ -27,7 +27,7 @@
 	event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" onkeyup="this.value = this.value.toUpperCase();"  placeholder="enter Roman Numeral"><br>
         	<span id="convertoint"></span>
         	 <div> <p id="menu1" onclick="conversionint()">Convert</p> </form><p id="clear1" onclick="clear1()">clear</p>
-           </div><br><br><hr>
+           </div><hr>
         	<p id="result" style="float:left">Answer:</p><p style="float:left"id="result1"></p><br>
          </div>
         </div>
@@ -40,13 +40,16 @@
         	<div> <p id="menu2" onclick="conversionroman()">Convert</p> <p id="clear2" onclick="clear2()">clear</p>
            
            
-        	 </div><br><br><hr>
+        	 </div><hr>
         	<p id="result" style="float:left">Answer:</p><p style="float:left"id="result2"></p><br>
         	</div>
 </div>
 <style>
 	.middle{
 		margin-top:90px;
+	}
+	#romanToInt{
+		position:;
 	}
 	hr{
 		border-width:0.1px;
@@ -59,12 +62,25 @@
 		font-size:30px;
 	}
 	.selectoperation{
-		
+		float:center;
+	}
+	.middle{
+
 	}
 	#operation1{
-		margin-left:130px;}
+		float:center;
+		display:inline-block;
+		
+	
+
+}
 	#operation2{
-		margin-right:120px;
+		
+		display:inline;
+		float:center;
+		
+
+ 
 		
 	}
 	#operation1:hover{
@@ -82,6 +98,7 @@
 		background-color:#ffb547;
 	}
 	#operation1,#operation2{
+		
 		padding:7px;
 		border-radius:7px;
 		border-color:grey;
@@ -120,23 +137,27 @@
 	margin-top:100px;
 	border-width:1px;
 	font-size:30px;
-	position: absolute;
+	
+	position:absolute; ;
   /*it can be fixed too*/
-  left: 0;
-  right: 0;
+  left:0 ;
+  right:0 ;
   top: 0;
-  bottom: 0;
+  bottom:0 ;
   margin: auto;
-  /*this to solve "the content will not be cut when the window is smaller than the content": */
-  max-width: 100%;
-  max-height: 100%;
-  overflow: auto;
+  /*this to solve "the content will not be cut when the window is smaller than the content": {*/
+  max-width:100% ;
+ max-height:100% ;
+  overflow:;
+}
+div{
+
 }
 #clear1,#clear2{
-	float:right;
+	display:inline;
    margin-top:50px;
    margin-left:px;
-   margin-right:220px;
+   margin-right:px;
   border-style:solid;
   box-shadow:0px 3px 11px rgb(0 0 0/0.2);
   border-width:1px;
@@ -150,17 +171,20 @@
   background-color:#bfbfbf;
   margin-top:20px;
   border:none;
+ 
+
+  
 }
 #menu1,#menu2{
-	
-	float:left;
-   margin-top:50px;
-   margin-left:220px;
+	display:inline-block;
+float:center;
+   margin-top:50px ;
+   margin-left:px ;
   border-style:solid;
   border:none;
   box-shadow:0px 3px 11px rgb(0 0 0/0.2);
   border-width:1px;
-  margin-top:20px;
+  margin-top:20px ;
   padding-left:12px;
   padding-bottom:1px;
   padding-right:14px;
@@ -168,6 +192,12 @@
   font-size:25px;
   width:90px;
   background-color:#bfbfbf;
+  }
+  
+ 
+
+  
+  
 
 }
 #clear1:hover{
@@ -198,7 +228,7 @@ button{
     margin:auto;
 }
 .articles{
-    width:90%; /*Takes 90% width from WebContainer*/
+    width:%; /*Takes 90% width from WebContainer*/
     height: auto;
     margin: auto;
 }
