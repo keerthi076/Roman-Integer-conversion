@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roman/Integer converter</title>
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&display=swap" rel="stylesheet">
+<script src="conversion.js"></script>
+</head>
+<body>
+	<div class="container">
+		
+		<div class="selectoperation" style="display:block">
+			<h1>ROMAN/INTEGER CONVERSION</h1>
+			<div class="middle">
+			<div style="float:left" id="operation1" onclick="operation1()">Roman to Integer</div>
+			<div style="float:right" id='operation2' onclick="operation2()">Integer to Roman</div>
+        </div></div>
+        <div class="romanToInt" style="display:none">
+        	<h1>ROMAN TO INTEGER CONVERSION<span onclick="change()"><i class="fa fa-home" style="float:right"></i></span></h1>
+        	<div id="romanconversion">
+        	<input id="romaninput" type="text" onkeyup="this.value = this.value.toUpperCase();"  placeholder="enter Roman Numeral"><br>
+        	<span id="convertoint"></span>
+        	 <div> <p id="menu1" onclick="conversionint()">Convert</p> <p id="clear1" onclick="clear1()">clear</p>
+           </div><br><br><hr>
+        	<p id="result" style="float:left">Answer:</p><p style="float:left"id="result1"></p><br>
+         </div>
+        </div>
+     
+        <div class="intToRoman" style="display:none">
+        	<h1>INTEGER TO ROMAN CONVERSION<span onclick="change()"><i class="fa fa-home" style="float:right"></i></span></h1>
+        	<div id="romanconversion">
+        	<input id="intinput"  type="number"placeholder="enter Integer">
+        	
+        	<div> <p id="menu2" onclick="conversionroman()">Convert</p> <p id="clear2" onclick="clear2()">clear</p>
+           
+           
+        	 </div><br><br><hr>
+        	<p id="result" style="float:left">Answer:</p><p style="float:left"id="result2"></p><br>
+        	</div>
+</div>
+<style>
+	.middle{
+		margin-top:90px;
+	}
+	hr{
+		border-width:0.1px;
+		height:1px;
+		color:gray;
+		background-color:grey;
+	}
+	#convertoint{
+				height:40px;
+		font-size:30px;
+	}
+	.selectoperation{
+		
+	}
+	#operation1{
+		margin-left:130px;}
+	#operation2{
+		margin-right:120px;
+		
+	}
+	#operation1:hover{
+		background-color:grey;
+	}
+	#operation2:hover{
+		background-color:grey;
+	}
+	i:hover{
+		border-style:solid;
+		border-width:1px;
+	}
+	h1{
+
+		background-color:#ffb547;
+	}
+	#operation1,#operation2{
+		padding:7px;
+		border-radius:7px;
+		border-color:grey;
+		border-style:solid;
+		border:none;
+		border-width:1px;
+		background-color:#bfbfbf;
+		box-shadow:0px 3px 11px rgb(0 0 0/0.2);
+	}
+	#romanconversion{
+       margin-top:50px;
+	}
+	input{
+		height:40px;
+	}
+	#resut1{
+		float:left;
+	}
+
+.container{
+
+	text-align:center;
+	font-family:'dongle',sans-serif;
+	border-style:solid;
+	border:none;
+  float:center;
+  height:350px;
+  width:650px;
+   box-shadow:0px 3px 11px rgb(0 0 0/0.2);
+   border-color:grey;
+	margin-left:350px;
+	margin-right:300px;
+	border-radius:7px;
+	margin-top:100px;
+	border-width:1px;
+	font-size:30px;
+}
+#clear1,#clear2{
+	float:right;
+   margin-top:50px;
+   margin-left:px;
+   margin-right:220px;
+  border-style:solid;
+  box-shadow:0px 3px 11px rgb(0 0 0/0.2);
+  border-width:1px;
+  margin-top:10px;
+  padding-left:12px;
+  padding-bottom:1px;
+  padding-right:12px;
+  border-radius:4px;
+  font-size:25px;
+  width:80px;
+  background-color:#bfbfbf;
+  margin-top:20px;
+  border:none;
+}
+#menu1,#menu2{
+	
+	float:left;
+   margin-top:50px;
+   margin-left:220px;
+  border-style:solid;
+  border:none;
+  box-shadow:0px 3px 11px rgb(0 0 0/0.2);
+  border-width:1px;
+  margin-top:20px;
+  padding-left:12px;
+  padding-bottom:1px;
+  padding-right:14px;
+  border-radius:4px;
+  font-size:25px;
+  width:90px;
+  background-color:#bfbfbf;
+
+}
+#clear1:hover{
+	font-size:30px;
+}
+#clear2:hover{
+	font-size:30px;
+}
+#menu1:hover{
+	font-size:30px;
+}
+#menu2:hover{
+	font-size:30px;
+}
+
+p{
+	font-size:35px;
+}
+button{
+	width:20px;
+	height:10px;
+	padding:5px;
+	
+}
+
