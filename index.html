@@ -23,9 +23,10 @@
         <div class="romanToInt" style="display:none">
         	<h1>ROMAN TO INTEGER CONVERSION<span onclick="change()"><i class="fa fa-home" style="float:right"></i></span></h1>
         	<div id="romanconversion">
-        	<input id="romaninput" type="text" onkeyup="this.value = this.value.toUpperCase();"  placeholder="enter Roman Numeral"><br>
+      <form>  	<input id="romaninput" type="text" onkeypress="return (event.charCode > 64 && 
+	event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" onkeyup="this.value = this.value.toUpperCase();"  placeholder="enter Roman Numeral"><br>
         	<span id="convertoint"></span>
-        	 <div> <p id="menu1" onclick="conversionint()">Convert</p> <p id="clear1" onclick="clear1()">clear</p>
+        	 <div> <p id="menu1" onclick="conversionint()">Convert</p> </form><p id="clear1" onclick="clear1()">clear</p>
            </div><br><br><hr>
         	<p id="result" style="float:left">Answer:</p><p style="float:left"id="result1"></p><br>
          </div>
